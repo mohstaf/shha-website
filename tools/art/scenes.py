@@ -2,12 +2,12 @@ import sys, os; sys.path.insert(0, os.path.dirname(__file__))
 from doodles import *
 
 CHAR = {
- 'girl-blue': lambda: hijab_girl('blue', 'sand', 'dots', 'smile', 'skin'),
- 'girl-red':  lambda: hijab_girl('red', 'blue', 'zigzag', 'big', 'skin3', arm=wave_arm('blue')),
- 'girl-sand': lambda: hijab_girl('sand', 'red', 'stripes', 'big', 'skin2'),
- 'girl-flag': lambda: hijab_girl('red', 'green', 'dots', 'big', 'skin', arm=flag_arm('green')),
- 'boy':       lambda: boy('blue'),
- 'mother':    mother,
+ 'girl-blue': lambda: kid_hijab('blue', 'mustard', 'skin'),
+ 'girl-red':  lambda: kid_hijab('coral', 'mint', 'skin3', 'big', arm=wave_arm('mint')),
+ 'girl-sand': lambda: kid_hijab('mustard', 'coral', 'skin2', 'big'),
+ 'girl-flag': lambda: kid_hijab('coral', 'mint', 'skin', 'big', arm=flag_arm('mint')),
+ 'boy':       lambda: kid_boy('blue'),
+ 'mother':    mom_baby,
  'doctor':    doctor,
 }
 BG = {'girl-blue':'#eef4fb', 'girl-red':'#fdf0ea', 'girl-sand':'#eef6f0', 'girl-flag':'#eef4fb', 'boy':'#fdf6e8',
@@ -41,9 +41,9 @@ def scene(key, rname, medical=None):
         return W, H, BG[key], it
     if rname == 'pill':
         it += at(W*0.12, H*0.3, sparkle(1.1)) + at(W*0.9, H*0.72, sparkle(0.9, 'blush')) + at(W*0.86, H*0.24, heart(0.7))
-        s = 1.85
+        s = 1.6
         items = CHAR[key]() if key in CHAR else hands_heart()
-        it += at(W/2 - 100*s, H*0.6 - 88*s, items, s)
+        it += at(W/2 - 100*s, H*0.6 - 100*s, items, s)
         return W, H, BG.get(key, '#fdf6e8'), it
     it += sky(W, H, wide=wide)
     if medical == 'cells':
@@ -56,7 +56,7 @@ def scene(key, rname, medical=None):
         it += at(W/2, H*0.12 + 0, heart(0.8))
     elif key == 'hands':
         s = min(H*0.92/200, W*0.9/200)
-        it += at(W/2 - 100*s, H - 192*s, hands_heart(), s)
+        it += at(W/2 - 100*s, H - 200*s, hands_heart(), s)
     else:
         extra = 48 if key == 'girl-flag' else 0
         s = min(H*0.94/200, W*0.96/(200+extra))

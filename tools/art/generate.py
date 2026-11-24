@@ -1,7 +1,7 @@
 """Regenerate the doodle illustrations in static/img/art/.
 
 Run from the project folder:  python3 tools/art/generate.py
-The drawings live in doodles.py and the scene layouts in scenes.py.
+The drawings live in doodles.py (cute, flat style) and the scene layouts in scenes.py.
 """
 import os, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
