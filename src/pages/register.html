@@ -1,0 +1,113 @@
+<!--meta {"title": "Register with SHHA", "description": "Register with SHHA, the confidential national register of people with inherited blood disorders in Somalia.", "nav": "help"} -->
+
+<header class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="get-help.html">Get help</a></li>
+        <li aria-current="page">Register with SHHA</li>
+      </ol>
+    </nav>
+    <h1>Register with SHHA</h1>
+    <p class="lede">The register helps SHHA plan services and request donated treatment. Your details are confidential and never published.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container split split--wide-left">
+    <div class="form-card">
+      <form class="form" data-form="register" novalidate data-success="Thank you. Your details have reached SHHA. We will contact you soon.">
+        <div class="field">
+          <label for="reg-name">Full name of the person with the condition</label>
+          <input type="text" id="reg-name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="reg-age">Age</label>
+            <span class="field__hint" id="reg-age-hint">For a baby, write the months, for example 8 months.</span>
+            <input type="text" id="reg-age" name="age" aria-describedby="reg-age-hint" required>
+          </div>
+          <fieldset class="field">
+            <legend>Sex</legend>
+            <div class="choice-group">
+              <label class="check" for="reg-sex-male"><input type="radio" id="reg-sex-male" name="sex" value="male" required data-error="Please choose one."> Male</label>
+              <label class="check" for="reg-sex-female"><input type="radio" id="reg-sex-female" name="sex" value="female" required data-error="Please choose one."> Female</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="reg-region">Region</label>
+            <select id="reg-region" name="region" autocomplete="address-level1" required data-error="Please choose a region.">
+              <option value="">Choose a region</option>
+              <option>Banadir</option>
+              <option>Galmudug</option>
+              <option>Hirshabelle</option>
+              <option>Jubaland</option>
+              <option>Puntland</option>
+              <option>South West</option>
+              <option>Somaliland</option>
+              <option>Other or outside Somalia</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="reg-diagnosis">Diagnosis, if known</label>
+            <select id="reg-diagnosis" name="diagnosis" required data-error="Please choose one.">
+              <option value="">Choose one</option>
+              <option>Haemophilia A</option>
+              <option>Haemophilia B</option>
+              <option>Von Willebrand disease</option>
+              <option>Other bleeding disorder</option>
+              <option>Sickle cell disease</option>
+              <option>Thalassaemia</option>
+              <option>Not yet diagnosed or don't know</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="reg-phone">Phone or WhatsApp number</label>
+          <span class="field__hint" id="reg-phone-hint">Add the country code if you are outside Somalia.</span>
+          <input type="tel" id="reg-phone" name="phone" autocomplete="tel" inputmode="tel" aria-describedby="reg-phone-hint" required>
+        </div>
+
+        <fieldset class="field">
+          <legend>Who is filling in this form?</legend>
+          <div class="choice-group">
+            <label class="check" for="reg-by-self"><input type="radio" id="reg-by-self" name="filled_by" value="self" required data-error="Please choose one."> The person with the condition</label>
+            <label class="check" for="reg-by-carer"><input type="radio" id="reg-by-carer" name="filled_by" value="parent or carer" required data-error="Please choose one."> Parent or carer</label>
+            <label class="check" for="reg-by-hw"><input type="radio" id="reg-by-hw" name="filled_by" value="health worker" required data-error="Please choose one."> Health worker</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="reg-notes">Anything else we should know <span class="field__optional">(optional)</span></label>
+          <textarea id="reg-notes" name="notes" rows="4"></textarea>
+        </div>
+
+        <div>
+          <label class="check" for="reg-consent"><input type="checkbox" id="reg-consent" name="consent" value="yes" required data-error="Please tick to agree before sending."> <span>I agree that SHHA may keep these details in its confidential register and contact me. <a href="policies.html#privacy">Privacy policy</a></span></label>
+        </div>
+
+        <div class="form__status" hidden></div>
+        <div>
+          <button class="btn btn--primary" type="submit">Send registration</button>
+        </div>
+      </form>
+    </div>
+
+    <aside class="reg-aside" aria-labelledby="talk-title">
+      <h2 id="talk-title" class="h-sub">Prefer to talk?</h2>
+      <p>We can register you by phone, in Somali or English.</p>
+      <dl class="dl-rows">
+        <div><dt>WhatsApp, 24 hours</dt><dd><a href="https://wa.me/252618556681">+252 61 855 6681</a></dd></div>
+        <div><dt>Call</dt><dd><a href="tel:+252615002209">+252 61 500 2209</a></dd></div>
+      </dl>
+      <h2 class="h-sub mt-2">Your privacy</h2>
+      <p>Only a small SHHA team sees your details. We share numbers with partners, never names. You can ask us to delete your details at any time.</p>
+    </aside>
+  </div>
+</section>
