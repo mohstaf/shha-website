@@ -767,8 +767,8 @@ figure.portrait { margin: 0; }
 .steps::before { content: ""; position: absolute; left: 8px; top: 14px; bottom: 30px; width: 2px; background: var(--line-strong); border-radius: 2px; }
 .steps li { position: relative; margin: 0; padding: 0 0 30px; display: flex; flex-direction: column; gap: 4px; }
 .steps li:last-child { padding-bottom: 0; }
-.steps li::before { content: ""; position: absolute; left: -40px; top: 6px; width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid var(--navy-800); box-sizing: border-box; }
-.steps li:first-child::before { background: var(--red-600); box-shadow: 0 0 0 5px var(--red-50); }
+.steps li::before { content: ""; position: absolute; left: -40px; top: 6px; width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid var(--red-600); box-sizing: border-box; }
+.steps li:first-child::before { background: var(--red-600); border-color: var(--red-600); box-shadow: 0 0 0 5px var(--red-50); }
 .steps__title { font-weight: 600; color: var(--ink); font-size: clamp(1.15rem, 1rem + 0.5vw, 1.35rem); letter-spacing: -0.02em; }
 .steps__text { color: var(--text); font-size: 1.05rem; }
 
