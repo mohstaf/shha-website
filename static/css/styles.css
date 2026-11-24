@@ -186,9 +186,9 @@ strong { color: var(--ink); font-weight: 600; }
 .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
-.text-link { font-weight: 600; text-decoration: none; color: var(--ink); display: inline-flex; align-items: center; gap: 6px; }
+.text-link { font-weight: 600; text-decoration: none; color: var(--red-600); display: inline-flex; align-items: center; gap: 6px; }
 .text-link::after { content: "\2192"; transition: transform .18s ease; color: var(--red-600); }
-.text-link:hover { color: var(--red-600); }
+.text-link:hover { color: var(--red-700); }
 .text-link:hover::after { transform: translateX(3px); }
 
 /* ---------- Sections ---------- */
@@ -841,7 +841,7 @@ figure.portrait { margin: 0; }
 .cv__photo { margin: 0 0 24px; aspect-ratio: 4 / 5; border-radius: 24px; overflow: hidden; border: 1px solid var(--line); background: #fff; }
 .cv__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .cv__name { font-size: clamp(1.5rem, 1.2rem + 0.6vw, 1.75rem); letter-spacing: -0.035em; line-height: 1.15; margin: 0 0 8px; white-space: nowrap; }
-.cv__role { color: var(--navy-700); font-weight: 600; margin: 0 0 6px; }
+.cv__role { color: var(--red-600); font-weight: 600; margin: 0 0 6px; }
 .cv__org { color: var(--text); margin: 0 0 20px; line-height: 1.5; }
 .cv__links { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); display: flex; gap: 24px; }
 .cv__links li { margin: 0; }
@@ -882,7 +882,7 @@ figure.portrait { margin: 0; }
 
 /* Board cards: tight name, role and link */
 .person__name { margin: 8px 0 0; font-size: 1.15rem; line-height: 1.3; letter-spacing: -0.015em; }
-.person__role { margin: 6px 0 0; font-size: 1.02rem; font-weight: 500; color: var(--navy-700); }
+.person__role { margin: 6px 0 0; font-size: 1.02rem; font-weight: 500; color: var(--red-600); }
 .person__bio { margin: 0; }
 .person__bio.mt-1 { margin-top: 16px; }
 @media (max-width: 760px) { .cv .pubs a { grid-template-columns: minmax(0, 1fr) 20px; } }
