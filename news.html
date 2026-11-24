@@ -11,14 +11,14 @@
 <meta property="og:image" content="img/logo-400.png">
 <meta name="theme-color" content="#071a33">
 <meta name="color-scheme" content="light dark">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png?v=20261124150543">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=20261124150543">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png?v=20261124150925">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png?v=20261124150925">
 <script>try{var t=localStorage.getItem("shha-theme");if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=20261124150543">
-<script src="js/main.js?v=20261124150543" defer></script>
+<link rel="stylesheet" href="css/styles.css?v=20261124150925">
+<script src="js/main.js?v=20261124150925" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -32,12 +32,6 @@
     </p>
     <ul class="utility__links">
       <li>
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme">
-          <svg class="i-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
-          <svg class="i-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        </button>
-      </li>
-      <li>
         <ul class="lang" aria-label="Language">
           <li><a href="news.html" lang="en" aria-current="true"><span class="lang__long">English</span><span class="lang__short">EN</span></a></li>
           <li><a href="so.html" lang="so"><span class="lang__long">Soomaali</span><span class="lang__short">SO</span></a></li>
@@ -50,13 +44,17 @@
 <header class="site-header">
   <div class="container">
     <a class="brand" href="index.html">
-      <img src="img/logo-96.jpg?v=20261124150543" width="52" height="52" alt="">
+      <img src="img/logo-96.jpg?v=20261124150925" width="52" height="52" alt="">
       <span class="brand__text">
         <span class="brand__name">SHHA</span>
         <span class="brand__full">Somali Haemophilia and Haemoglobinopathies Association</span>
       </span>
     </a>
 
+    <button class="theme-toggle theme-toggle--mob" type="button" data-theme-toggle aria-label="Switch to dark theme">
+      <svg class="i-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+          <svg class="i-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span class="nav-toggle__bars" aria-hidden="true"><span></span></span>
       Menu
@@ -87,6 +85,10 @@
         </li>
       </ul>
       <div class="nav__actions">
+        <button class="theme-toggle theme-toggle--desk" type="button" data-theme-toggle aria-label="Switch to dark theme">
+          <svg class="i-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+          <svg class="i-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
         <a class="btn btn--primary btn--sm" href="https://wa.me/252618556681">Talk to us</a>
       </div>
     </nav>
@@ -114,19 +116,19 @@
     </div>
     <div class="grid grid--3">
       <a class="news-card" href="news-shha-founded.html">
-  <span class="news-card__img"><img src="img/art/city-card.svg?v=20261124150543" alt="Illustration of Mogadishu by the sea" width="800" height="600" loading="lazy"></span>
+  <span class="news-card__img"><img src="img/art/city-card.svg?v=20261124150925" alt="Illustration of Mogadishu by the sea" width="800" height="600" loading="lazy"></span>
   <div class="news-card__meta"><span>2026</span><span>Organisation</span></div>
   <h3>SHHA is founded in Mogadishu</h3>
   <p>Patients, families and health professionals form a national association for bleeding disorders and haemoglobinopathies.</p>
 </a>
 <a class="news-card" href="news-wfh-engagement.html">
-  <span class="news-card__img"><img src="img/art/doctor-card.svg?v=20261124150543" alt="Illustration of a health worker with a stethoscope" width="800" height="600" loading="lazy"></span>
+  <span class="news-card__img"><img src="img/art/doctor-card.svg?v=20261124150925" alt="Illustration of a health worker with a stethoscope" width="800" height="600" loading="lazy"></span>
   <div class="news-card__meta"><span>2026</span><span>Partnerships</span></div>
   <h3>SHHA begins engagement with the World Federation of Hemophilia</h3>
   <p>A first step towards training, data and donated treatment for Somali patients.</p>
 </a>
 <a class="news-card" href="news.html#days">
-  <span class="news-card__img"><img src="img/art/girl-flag-card.svg?v=20261124150543" alt="Illustration of a girl holding the flag of Somalia" width="800" height="600" loading="lazy"></span>
+  <span class="news-card__img"><img src="img/art/girl-flag-card.svg?v=20261124150925" alt="Illustration of a girl holding the flag of Somalia" width="800" height="600" loading="lazy"></span>
   <div class="news-card__meta"><span>17 April 2027</span><span>Awareness day</span></div>
   <h3>World Haemophilia Day 2027</h3>
   <p>How SHHA will mark the day in Mogadishu, and how families and health workers can take part.</p>
@@ -168,7 +170,7 @@
     <div class="footer-top">
       <div class="footer-about">
         <a class="footer-brand" href="index.html">
-          <img src="img/logo-96.jpg?v=20261124150543" width="48" height="48" alt="">
+          <img src="img/logo-96.jpg?v=20261124150925" width="48" height="48" alt="">
           <span class="footer-brand__name"><span>Somali Haemophilia and</span> <span>Haemoglobinopathies Association</span></span>
         </a>
         <p>A national, non-profit, volunteer-led organisation based in Mogadishu, for people living with inherited blood disorders.</p>
