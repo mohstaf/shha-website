@@ -52,6 +52,9 @@ def build_page(path: Path, layout: str) -> str:
     html = layout
     for key in NAV_KEYS:
         html = html.replace(f"{{{{current:{key}}}}}", ' aria-current="page"' if meta.get("nav") == key else "")
+        html = html.replace(f"{{{{active:{key}}}}}", ' data-active' if meta.get("nav") == key else "")
+    # Mark this page's own entry in the submenus.
+    html = html.replace(f'class="nav__sublink" href="{path.name}"', f'class="nav__sublink" href="{path.name}" aria-current="page"')
 
     replacements = {
         "full_title": full_title,
