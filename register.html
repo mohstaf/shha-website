@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register with SHHA | SHHA</title>
+<meta name="description" content="Register with SHHA, the confidential national register of people with inherited blood disorders in Somalia.">
+<meta property="og:title" content="Register with SHHA | SHHA">
+<meta property="og:description" content="Register with SHHA, the confidential national register of people with inherited blood disorders in Somalia.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/logo-400.png">
+<meta name="theme-color" content="#0e2a4f">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="utility">
+  <div class="container">
+    <p class="utility__msg">
+      <span class="utility__icon"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.6a8.6 8.6 0 0 1-12.7 7.6L3.5 20.5l1.4-4.1a8.6 8.6 0 1 1 15.6-4.8z"/></svg></span>
+      <span class="utility__hide-sm">Free help in Somali and English, day or night.</span>
+      <a href="https://wa.me/252618556681">WhatsApp +252 61 855 6681</a>
+    </p>
+    <ul class="utility__links">
+      <li>
+        <ul class="lang" aria-label="Language">
+          <li><a href="register.html" lang="en" aria-current="true"><span class="lang__long">English</span><span class="lang__short">EN</span></a></li>
+          <li><a href="so.html" lang="so"><span class="lang__long">Soomaali</span><span class="lang__short">SO</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <img src="img/logo-96.jpg" width="52" height="52" alt="">
+      <span class="brand__text">
+        <span class="brand__name">SHHA</span>
+        <span class="brand__full">Somali Haemophilia and Haemoglobinopathies Association</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span></span>
+      Menu
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="about.html">About</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="blood-disorders.html">Blood disorders</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="get-help.html" aria-current="page">Get help</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="programmes.html">Our programmes</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="news.html">News</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="get-involved.html">Get involved</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <div class="nav__actions">
+        <a class="btn btn--primary btn--sm" href="https://wa.me/252618556681">Talk to us</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<header class="page-hero">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="get-help.html">Get help</a></li>
+        <li aria-current="page">Register with SHHA</li>
+      </ol>
+    </nav>
+    <h1>Register with SHHA</h1>
+    <p class="lede">The register helps SHHA plan services and request donated treatment. Your details are confidential and never published.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container split split--wide-left">
+    <div class="form-card">
+      <form class="form" data-form="register" novalidate data-success="Thank you. Your details have reached SHHA. We will contact you soon.">
+        <div class="field">
+          <label for="reg-name">Full name of the person with the condition</label>
+          <input type="text" id="reg-name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="reg-age">Age</label>
+            <span class="field__hint" id="reg-age-hint">For a baby, write the months, for example 8 months.</span>
+            <input type="text" id="reg-age" name="age" aria-describedby="reg-age-hint" required>
+          </div>
+          <fieldset class="field">
+            <legend>Sex</legend>
+            <div class="choice-group">
+              <label class="check" for="reg-sex-male"><input type="radio" id="reg-sex-male" name="sex" value="male" required data-error="Please choose one."> Male</label>
+              <label class="check" for="reg-sex-female"><input type="radio" id="reg-sex-female" name="sex" value="female" required data-error="Please choose one."> Female</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form__row">
+          <div class="field">
+            <label for="reg-region">Region</label>
+            <select id="reg-region" name="region" autocomplete="address-level1" required data-error="Please choose a region.">
+              <option value="">Choose a region</option>
+              <option>Banadir</option>
+              <option>Galmudug</option>
+              <option>Hirshabelle</option>
+              <option>Jubaland</option>
+              <option>Puntland</option>
+              <option>South West</option>
+              <option>Somaliland</option>
+              <option>Other or outside Somalia</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="reg-diagnosis">Diagnosis, if known</label>
+            <select id="reg-diagnosis" name="diagnosis" required data-error="Please choose one.">
+              <option value="">Choose one</option>
+              <option>Haemophilia A</option>
+              <option>Haemophilia B</option>
+              <option>Von Willebrand disease</option>
+              <option>Other bleeding disorder</option>
+              <option>Sickle cell disease</option>
+              <option>Thalassaemia</option>
+              <option>Not yet diagnosed or don't know</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="reg-phone">Phone or WhatsApp number</label>
+          <span class="field__hint" id="reg-phone-hint">Add the country code if you are outside Somalia.</span>
+          <input type="tel" id="reg-phone" name="phone" autocomplete="tel" inputmode="tel" aria-describedby="reg-phone-hint" required>
+        </div>
+
+        <fieldset class="field">
+          <legend>Who is filling in this form?</legend>
+          <div class="choice-group">
+            <label class="check" for="reg-by-self"><input type="radio" id="reg-by-self" name="filled_by" value="self" required data-error="Please choose one."> The person with the condition</label>
+            <label class="check" for="reg-by-carer"><input type="radio" id="reg-by-carer" name="filled_by" value="parent or carer" required data-error="Please choose one."> Parent or carer</label>
+            <label class="check" for="reg-by-hw"><input type="radio" id="reg-by-hw" name="filled_by" value="health worker" required data-error="Please choose one."> Health worker</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="reg-notes">Anything else we should know <span class="field__optional">(optional)</span></label>
+          <textarea id="reg-notes" name="notes" rows="4"></textarea>
+        </div>
+
+        <div>
+          <label class="check" for="reg-consent"><input type="checkbox" id="reg-consent" name="consent" value="yes" required data-error="Please tick to agree before sending."> <span>I agree that SHHA may keep these details in its confidential register and contact me. <a href="policies.html#privacy">Privacy policy</a></span></label>
+        </div>
+
+        <div class="form__status" hidden></div>
+        <div>
+          <button class="btn btn--primary" type="submit">Send registration</button>
+        </div>
+      </form>
+    </div>
+
+    <aside class="reg-aside" aria-labelledby="talk-title">
+      <h2 id="talk-title" class="h-sub">Prefer to talk?</h2>
+      <p>We can register you by phone, in Somali or English.</p>
+      <dl class="dl-rows">
+        <div><dt>WhatsApp, 24 hours</dt><dd><a href="https://wa.me/252618556681">+252 61 855 6681</a></dd></div>
+        <div><dt>Call</dt><dd><a href="tel:+252615002209">+252 61 500 2209</a></dd></div>
+      </dl>
+      <h2 class="h-sub mt-2">Your privacy</h2>
+      <p>Only a small SHHA team sees your details. We share numbers with partners, never names. You can ask us to delete your details at any time.</p>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-about">
+        <a class="footer-brand" href="index.html">
+          <img src="img/logo-96.jpg" width="48" height="48" alt="">
+          <span class="footer-brand__name"><span>Somali Haemophilia and</span> <span>Haemoglobinopathies Association</span></span>
+        </a>
+        <p>A national, non-profit, volunteer-led organisation based in Mogadishu, for people living with inherited blood disorders.</p>
+        <p class="footer-status">Registration with the Ministry of Interior, Federal Affairs and Reconciliation is in progress.</p>
+      </div>
+      <nav aria-labelledby="footer-org">
+        <h2 class="footer-title" id="footer-org">Organisation</h2>
+        <ul class="footer-list">
+          <li><a href="about.html">About SHHA</a></li>
+          <li><a href="about.html#governance">Board and governance</a></li>
+          <li><a href="programmes.html">Our programmes</a></li>
+          <li><a href="news.html">News and events</a></li>
+          <li><a href="about.html#reports">Reports and documents</a></li>
+          <li><a href="get-involved.html">Get involved</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-help">
+        <h2 class="footer-title" id="footer-help">Get help</h2>
+        <ul class="footer-list">
+          <li><a href="get-help.html">Get help</a></li>
+          <li><a href="register.html">Register with SHHA</a></li>
+          <li><a href="blood-disorders.html">Blood disorders</a></li>
+          <li><a href="get-help.html#living">Living with a blood disorder</a></li>
+          <li><a href="health-workers.html">For health workers</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-title">Contact</h2>
+        <ul class="footer-contact">
+          <li><span>WhatsApp, 24 hours</span><a href="https://wa.me/252618556681">+252 61 855 6681</a></li>
+          <li><span>Call</span><a href="tel:+252615002209">+252 61 500 2209</a></li>
+          <li><span>Email</span><a href="mailto:info@haemophilia-somalia.org">info@haemophilia-somalia.org</a></li>
+          <li><span>Office</span>Mogadishu, Somalia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span data-year>2026</span> SHHA. This website gives general information, not medical advice. In an emergency, go to the nearest hospital.</p>
+      <ul class="footer-legal">
+        <li><a href="policies.html#privacy">Privacy</a></li>
+        <li><a href="policies.html#disclaimer">Medical disclaimer</a></li>
+        <li><a href="policies.html#consent">Consent</a></li>
+        <li><a href="policies.html#funding">Funding</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
