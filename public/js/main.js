@@ -344,7 +344,7 @@ function setupForms() {
       if (!endpoint) {
         show(status, "info",
           "Online forms are not connected yet. Please send the same details on WhatsApp to " +
-          "+252 61 855 6681 or email info@haemophilia-somalia.org, and we will reply.");
+          "+252 61 855 6681 or email info@shha.so, and we will reply.");
         return;
       }
 

@@ -38,5 +38,5 @@ python3 build.py && git add -A && git commit -m "Update site" && git push && git
 - **Somali:** `so.html` must be checked by a native speaker. Full Somali translations of every page are still to come.
 - **Illustrations:** the site uses its own doodle illustrations instead of photos, so there are no stock photos to replace. They live in `static/img/art/`. To change a drawing, edit `tools/art/doodles.py` (the figures) or `tools/art/scenes.py` (the layouts), then run `python3 tools/art/generate.py` and `python3 build.py`. The President's profile photo on `president.html` is a real photo. So is the Data Scientist's photo on `mohamed-mustaf-ahmed.html`.
 - **Social links:** the footer has no social media links yet. Add a "Follow us" column in `src/layout.html` once SHHA has its Facebook, LinkedIn, X or WhatsApp channel pages.
-- **Email:** choose one official address. The site uses info@haemophilia-somalia.org.
+- **Email:** choose one official address. The site uses info@shha.so.
 - **Medical review:** the Medical Advisory Committee should review the condition pages before they are published.
