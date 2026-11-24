@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupToc();
   setupShowcase();
   setupRotator();
+  setupTheme();
   setupFilters();
   setupForms();
   document.querySelectorAll("[data-year]").forEach((el) => {
@@ -404,4 +405,18 @@ function show(el, kind, message) {
   el.hidden = false;
   el.setAttribute("role", "status");
   el.scrollIntoView({ block: "nearest", behavior: "smooth" });
+}
+
+// Light and dark theme. The choice is remembered on this device.
+function setupTheme() {
+  const btn = document.querySelector("[data-theme-toggle]");
+  if (!btn) return;
+  const root = document.documentElement;
+  const label = () => btn.setAttribute("aria-label", root.dataset.theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
+  label();
+  btn.addEventListener("click", () => {
+    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+    try { localStorage.setItem("shha-theme", root.dataset.theme); } catch (e) {}
+    label();
+  });
 }
