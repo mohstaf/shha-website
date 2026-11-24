@@ -224,8 +224,8 @@ strong { color: var(--ink); font-weight: 600; }
   background: center / contain no-repeat;
   animation: cell-float 22s ease-in-out infinite alternate;
 }
-.hero::before, .closing::before, .soon::before { background-image: url("../img/art/motif-cell.svg?v=20261124134229"); }
-.hero::after, .closing::after, .soon::after { background-image: url("../img/art/motif-sun.svg?v=20261124134229"); }
+.hero::before, .closing::before, .soon::before { background-image: url("../img/art/motif-cell.svg?v=20261124134352"); }
+.hero::after, .closing::after, .soon::after { background-image: url("../img/art/motif-sun.svg?v=20261124134352"); }
 .hero::before, .hero::after, .closing::before, .closing::after, .soon::before, .soon::after { opacity: .6; }
 .hero::before { width: 560px; height: 560px; left: -220px; top: -200px; }
 .hero::after { width: 720px; height: 720px; right: -300px; bottom: -380px; animation-duration: 28s; animation-direction: alternate-reverse; }
@@ -841,7 +841,7 @@ figure.portrait { margin: 0; }
 .cv__photo { margin: 0 0 24px; aspect-ratio: 4 / 5; border-radius: 24px; overflow: hidden; border: 1px solid var(--line); background: #fff; }
 .cv__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .cv__name { font-size: clamp(1.5rem, 1.2rem + 0.6vw, 1.75rem); letter-spacing: -0.035em; line-height: 1.15; margin: 0 0 8px; white-space: nowrap; }
-.cv__role { color: var(--red-600); font-weight: 600; margin: 0 0 6px; }
+.cv__role { color: var(--ink); font-weight: 600; margin: 0 0 6px; }
 .cv__org { color: var(--text); margin: 0 0 20px; line-height: 1.5; }
 .cv__links { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); display: flex; gap: 24px; }
 .cv__links li { margin: 0; }
@@ -882,7 +882,7 @@ figure.portrait { margin: 0; }
 
 /* Board cards: tight name, role and link */
 .person__name { margin: 8px 0 0; font-size: 1.15rem; line-height: 1.3; letter-spacing: -0.015em; }
-.person__role { margin: 6px 0 0; font-size: 1.02rem; font-weight: 500; color: var(--red-600); }
+.person__role { margin: 6px 0 0; font-size: 1.02rem; font-weight: 400; color: var(--text); }
 .person__bio { margin: 0; }
 .person__bio.mt-1 { margin-top: 16px; }
 @media (max-width: 760px) { .cv .pubs a { grid-template-columns: minmax(0, 1fr) 20px; } }
@@ -1046,7 +1046,7 @@ html { scroll-behavior: smooth; }
 .nowrap { white-space: nowrap; }
 
 /* ---------- Doodle brand details ---------- */
-.footer-art { height: clamp(70px, 9vw, 110px); margin-top: clamp(40px, 5vw, 64px); background: url("../img/art/skyline.svg?v=20261124134229") center bottom / auto 100% repeat-x; border-bottom: 1px solid rgba(255,255,255,0.12); opacity: .9; }
+.footer-art { height: clamp(70px, 9vw, 110px); margin-top: clamp(40px, 5vw, 64px); background: url("../img/art/skyline.svg?v=20261124134352") center bottom / auto 100% repeat-x; border-bottom: 1px solid rgba(255,255,255,0.12); opacity: .9; }
 .news-card:hover .news-card__img img { transform: scale(1.04) rotate(-0.8deg); }
 .art-figure { margin: clamp(8px, 2vw, 24px) 0 0; border-radius: 24px; overflow: hidden; aspect-ratio: 21 / 8; background: var(--surface); }
 .art-figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
