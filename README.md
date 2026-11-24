@@ -22,7 +22,7 @@ python3 build.py
 python3 -m http.server 8765 --directory public
 ```
 
-Then open http://localhost:8765. To check that every page renders without writing anything, run `python3 build.py --check`.
+Then open http://localhost:8765. Each build stamps every stylesheet, script and image with a new version, so browsers never show an old copy after you publish. To check that every page renders without writing anything, run `python3 build.py --check`.
 
 ## Publish
 

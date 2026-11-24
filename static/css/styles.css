@@ -849,7 +849,7 @@ figure.portrait { margin: 0; }
 .cv__links a:hover { color: var(--navy-800); }
 .cv__links svg { width: 16px; height: 16px; }
 .prose .help-strip__lead strong, .with-toc .help-strip__lead strong { display: inline; font-size: inherit; margin: 0; }
-.cv__links--about { margin-top: 28px; padding-top: 20px; flex-wrap: wrap; gap: 14px 28px; }
+.cv__links--about { margin-top: 24px; padding-top: 0; border-top: 0; flex-wrap: wrap; gap: 14px 28px; }
 .cv__side .breadcrumb ol { flex-wrap: nowrap; white-space: nowrap; }
 .cv__block { padding-bottom: 56px; margin-bottom: 56px; border-bottom: 1px solid var(--line); }
 .cv__block:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }

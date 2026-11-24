@@ -84,12 +84,22 @@ def main():
     shutil.copytree(ROOT / "static", OUT)
     pages = sorted((SRC / "pages").glob("*.html"))
     for page in pages:
-        (OUT / page.name).write_text(build_page(page, layout), encoding="utf-8")
+        (OUT / page.name).write_text(bust(build_page(page, layout)), encoding="utf-8")
+    css = OUT / "css" / "styles.css"
+    css.write_text(bust(css.read_text(encoding="utf-8")), encoding="utf-8")
     leftover = [p.name for p in OUT.glob("*.html") if "{{" in p.read_text(encoding="utf-8")]
     if leftover:
         raise SystemExit(f"Unfilled placeholders in: {', '.join(leftover)}")
     print(f"Built {len(pages)} pages into {OUT.relative_to(ROOT)}/")
 
+
+# Cache busting: every local stylesheet, script and image gets a version stamp
+# that changes on each build, so browsers always load the latest files.
+STAMP = __import__("time").strftime("%Y%m%d%H%M%S")
+_ASSET = __import__("re").compile(r'((?:src|href)="|url\(")((?:\.\./)?(?:css|js|img)/[^"?#]+)(?:\?[^"#]*)?')
+
+def bust(text):
+    return _ASSET.sub(lambda m: f"{m.group(1)}{m.group(2)}?v={STAMP}", text)
 
 if __name__ == "__main__":
     main()
