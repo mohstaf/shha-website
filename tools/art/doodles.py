@@ -95,13 +95,20 @@ def doctor():
     return it
 
 def man(shirt='blue', skin='skin2'):
-    it = [('F', P[shirt], '<path d="M54 200 C 54 170 76 150 100 150 C 124 150 146 170 146 200 Z"/>'),
-          ('F', P[shirt + 'L'], '<path d="M88 152 L 100 166 L 112 152 Z"/>'),
+    it = [('F', P[shirt], '<path d="M54 200 C 54 170 76 152 100 152 C 124 152 146 170 146 200 Z"/>'),
+          ('F', P[shirt + 'L'], '<path d="M88 154 L 100 168 L 112 154 Z"/>'),
+          ('F', P[skin], '<path d="M82 124 H 118 V 150 C 112 158 88 158 82 150 Z"/>'), ('F', P[skin + 'D'] if skin + 'D' in P else '#8f5a37', '<path d="M82 134 C 92 142 108 142 118 134 V 140 C 108 147 92 147 82 140 Z" opacity=".35"/>'),
           ('F', P[skin], '<circle cx="58" cy="100" r="9"/>'), ('F', P[skin], '<circle cx="142" cy="100" r="9"/>'),
-          ('F', P[skin], '<circle cx="100" cy="98" r="42"/>'),
-          ('F', P['hair'], '<path d="M60 92 C 56 58 80 48 100 48 C 122 48 146 58 140 92 C 132 74 118 68 100 70 C 84 68 68 74 60 92 Z"/>'),
-          ('F', P['hair'], '<path d="M70 116 C 78 142 122 142 130 116 C 124 130 112 134 100 134 C 88 134 76 130 70 116 Z"/>')]
-    it += eyes(100, 100) + cheeks(100, 114, 26) + smile(100, 116, 6)
+          ('F', P[skin], '<circle cx="100" cy="98" r="42"/>')]
+    # short curly hair
+    curls = ''.join(f'<circle cx="{x}" cy="{y}" r="{r}"/>' for x, y, r in
+                    [(64,86,9),(70,72,11),(82,62,12),(97,57,13),(113,59,12),(126,66,11),(134,78,10),(138,90,7),(60,96,6)])
+    it += [('F', P['hair'], curls)]
+    # full, neat beard and moustache, leaving the mouth visible
+    it += [('F', P['hair'], '<path d="M59 100 C 61 127 78 141 100 141 C 122 141 139 127 141 100 C 138 117 125 130 100 131 C 75 130 62 117 59 100 Z"/>'),
+           ('F', P['hair'], '<path d="M87 113 C 93 108 107 108 113 113 C 107 112 93 112 87 113 Z"/>')]
+    it += eyes(100, 98) + [('F', P['blush'], '<ellipse cx="76" cy="108" rx="7" ry="4.2" opacity=".55"/><ellipse cx="124" cy="108" rx="7" ry="4.2" opacity=".55"/>')]
+    it += [('F', '#8c2f2a', '<path d="M93 119 q7 7 14 0 Z"/>')]
     return it
 
 def family():
