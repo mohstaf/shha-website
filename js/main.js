@@ -42,6 +42,31 @@ function setupNav() {
   nav.addEventListener("click", (e) => {
     if (e.target.closest("a")) setOpen(false);
   });
+
+  // Submenus open on click; only one at a time.
+  const items = [...nav.querySelectorAll(".nav__item--sub")];
+  const closeSubs = (except) => items.forEach((item) => {
+    if (item === except) return;
+    item.classList.remove("is-open");
+    item.querySelector(".nav__trigger").setAttribute("aria-expanded", "false");
+  });
+  items.forEach((item) => {
+    const trigger = item.querySelector(".nav__trigger");
+    trigger.addEventListener("click", () => {
+      const open = !item.classList.contains("is-open");
+      closeSubs(item);
+      item.classList.toggle("is-open", open);
+      trigger.setAttribute("aria-expanded", String(open));
+    });
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".nav__item--sub")) closeSubs();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    const open = items.find((item) => item.classList.contains("is-open"));
+    if (open) { closeSubs(); open.querySelector(".nav__trigger").focus(); }
+  });
 }
 
 function setupHeader() {
