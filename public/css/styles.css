@@ -226,8 +226,8 @@ strong { color: var(--ink); font-weight: 600; }
   background: center / contain no-repeat;
   animation: cell-float 22s ease-in-out infinite alternate;
 }
-.hero::before, .closing::before, .soon::before { background-image: url("../img/art/motif-cell.svg?v=20261124150925"); }
-.hero::after, .closing::after, .soon::after { background-image: url("../img/art/motif-sun.svg?v=20261124150925"); }
+.hero::before, .closing::before, .soon::before { background-image: url("../img/art/motif-cell.svg?v=20261124151151"); }
+.hero::after, .closing::after, .soon::after { background-image: url("../img/art/motif-sun.svg?v=20261124151151"); }
 .hero::before, .hero::after, .closing::before, .closing::after, .soon::before, .soon::after { opacity: .6; }
 .hero::before { width: 560px; height: 560px; left: -220px; top: -200px; }
 .hero::after { width: 720px; height: 720px; right: -300px; bottom: -380px; animation-duration: 28s; animation-direction: alternate-reverse; }
@@ -823,7 +823,7 @@ figure.portrait { margin: 0; }
 .feature:hover .feature__title { color: var(--red-600); }
 .feature:hover .feature__arrow { opacity: 1; transform: none; }
 .feature__text { color: var(--text); font-size: 1.02rem; line-height: 1.55; max-width: 34em; }
-@media (min-width: 961px) { .feature--lg .feature__img { aspect-ratio: 16 / 7.2; } }
+@media (min-width: 961px) { .features .feature__img { aspect-ratio: auto; height: clamp(240px, 21vw, 300px); } }
 @media (max-width: 960px) { .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .features { grid-template-columns: 1fr; } .feature--lg { grid-column: span 1; } .feature--lg .feature__img { aspect-ratio: 4 / 3; } }
 
@@ -1045,7 +1045,7 @@ html { scroll-behavior: smooth; }
 .nowrap { white-space: nowrap; }
 
 /* ---------- Doodle brand details ---------- */
-.footer-art { height: clamp(70px, 9vw, 110px); margin-top: clamp(40px, 5vw, 64px); background: url("../img/art/skyline.svg?v=20261124150925") center bottom / auto 100% repeat-x; border-bottom: 1px solid rgba(255,255,255,0.12); opacity: .9; }
+.footer-art { height: clamp(70px, 9vw, 110px); margin-top: clamp(40px, 5vw, 64px); background: url("../img/art/skyline.svg?v=20261124151151") center bottom / auto 100% repeat-x; border-bottom: 1px solid rgba(255,255,255,0.12); opacity: .9; }
 .news-card:hover .news-card__img img { transform: scale(1.04) rotate(-0.8deg); }
 .art-figure { margin: clamp(8px, 2vw, 24px) 0 0; border-radius: 24px; overflow: hidden; aspect-ratio: 21 / 8; background: var(--surface); }
 .art-figure img { width: 100%; height: 100%; object-fit: cover; display: block; }

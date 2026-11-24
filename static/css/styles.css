@@ -823,7 +823,7 @@ figure.portrait { margin: 0; }
 .feature:hover .feature__title { color: var(--red-600); }
 .feature:hover .feature__arrow { opacity: 1; transform: none; }
 .feature__text { color: var(--text); font-size: 1.02rem; line-height: 1.55; max-width: 34em; }
-@media (min-width: 961px) { .feature--lg .feature__img { aspect-ratio: 16 / 7.2; } }
+@media (min-width: 961px) { .features .feature__img { aspect-ratio: auto; height: clamp(240px, 21vw, 300px); } }
 @media (max-width: 960px) { .features { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 640px) { .features { grid-template-columns: 1fr; } .feature--lg { grid-column: span 1; } .feature--lg .feature__img { aspect-ratio: 4 / 3; } }
 
