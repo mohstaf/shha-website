@@ -840,7 +840,7 @@ figure.portrait { margin: 0; }
 .cv__side .breadcrumb { margin-bottom: 24px; }
 .cv__photo { margin: 0 0 24px; aspect-ratio: 4 / 5; border-radius: 24px; overflow: hidden; border: 1px solid var(--line); background: #fff; }
 .cv__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-.cv__name { font-size: clamp(1.8rem, 1.4rem + 1.2vw, 2.4rem); letter-spacing: -0.04em; line-height: 1.05; margin: 0 0 10px; }
+.cv__name { font-size: clamp(1.5rem, 1.2rem + 0.6vw, 1.75rem); letter-spacing: -0.035em; line-height: 1.15; margin: 0 0 8px; white-space: nowrap; }
 .cv__role { color: var(--navy-700); font-weight: 600; margin: 0 0 6px; }
 .cv__org { color: var(--text); margin: 0 0 20px; line-height: 1.5; }
 .cv__links { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); display: flex; gap: 24px; }
