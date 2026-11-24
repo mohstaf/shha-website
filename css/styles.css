@@ -250,8 +250,8 @@ strong { color: var(--ink); font-weight: 600; }
   background: center / contain no-repeat;
   animation: cell-float 22s ease-in-out infinite alternate;
 }
-.hero::before, .closing::before, .soon::before { background-image: url("../img/art/motif-cell.svg?v=20261124170436"); }
-.hero::after, .closing::after, .soon::after { background-image: url("../img/art/motif-sun.svg?v=20261124170436"); }
+.hero::before, .closing::before, .soon::before { background-image: url("../img/art/motif-cell.svg?v=20261124170528"); }
+.hero::after, .closing::after, .soon::after { background-image: url("../img/art/motif-sun.svg?v=20261124170528"); }
 .hero::before, .hero::after, .closing::before, .closing::after, .soon::before, .soon::after { opacity: .6; }
 .hero::before { width: 560px; height: 560px; left: -220px; top: -200px; }
 .hero::after { width: 720px; height: 720px; right: -300px; bottom: -380px; animation-duration: 28s; animation-direction: alternate-reverse; }
@@ -349,7 +349,7 @@ strong { color: var(--ink); font-weight: 600; }
 .bento__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .facts { list-style: none; margin: 0 0 36px; padding: 0; border-top: 1px solid var(--line-strong); }
 .facts li { margin: 0; padding: 26px 0; border-bottom: 1px solid var(--line); font-size: clamp(1.4rem, 1.05rem + 1.2vw, 2.1rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.2; color: var(--ink); }
-.facts__close { font-size: clamp(1.15rem, 1rem + 0.5vw, 1.4rem); font-weight: 600; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 20px; }
+.facts__close { font-size: clamp(1.3rem, 1.05rem + 0.9vw, 1.8rem); line-height: 1.25; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); margin: 0 0 22px; max-width: 22em; }
 @media (max-width: 860px) { .bento { grid-template-columns: 1fr; } .bento__photo { aspect-ratio: 4 / 3; } }
 
 .help-card { border-top: 1px solid var(--line-strong); padding: 28px 0 0; }
@@ -1069,7 +1069,7 @@ html { scroll-behavior: smooth; }
 .nowrap { white-space: nowrap; }
 
 /* ---------- Doodle brand details ---------- */
-.footer-art { height: clamp(70px, 9vw, 110px); margin-top: clamp(40px, 5vw, 64px); background: url("../img/art/skyline.svg?v=20261124170436") center bottom / auto 100% repeat-x; border-bottom: 1px solid rgba(255,255,255,0.12); opacity: .9; }
+.footer-art { height: clamp(70px, 9vw, 110px); margin-top: clamp(40px, 5vw, 64px); background: url("../img/art/skyline.svg?v=20261124170528") center bottom / auto 100% repeat-x; border-bottom: 1px solid rgba(255,255,255,0.12); opacity: .9; }
 .news-card:hover .news-card__img img { transform: scale(1.04) rotate(-0.8deg); }
 .art-figure { margin: clamp(8px, 2vw, 24px) 0 0; border-radius: 24px; overflow: hidden; aspect-ratio: 21 / 8; background: var(--surface); }
 .art-figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
