@@ -412,11 +412,19 @@ function setupTheme() {
   const btn = document.querySelector("[data-theme-toggle]");
   if (!btn) return;
   const root = document.documentElement;
+  // Each illustration has a dark version (name-dark.svg); swap to match the theme.
+  const art = () => document.querySelectorAll('img[src*="img/art/"]').forEach((img) => {
+    const src = img.getAttribute("src");
+    const next = root.dataset.theme === "dark" ? src.replace(/(-dark)?\.svg/, "-dark.svg") : src.replace("-dark.svg", ".svg");
+    if (next !== src) img.setAttribute("src", next);
+  });
+  art();
   const label = () => btn.setAttribute("aria-label", root.dataset.theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
   label();
   btn.addEventListener("click", () => {
     root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
     try { localStorage.setItem("shha-theme", root.dataset.theme); } catch (e) {}
     label();
+    art();
   });
 }

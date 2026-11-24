@@ -1081,7 +1081,6 @@ html { scroll-behavior: smooth; }
 }
 :root[data-theme="dark"] .btn--primary { background: #c8291d; color: #fff; }
 :root[data-theme="dark"] .btn--primary:hover { background: #a51d14; color: #fff; }
-:root[data-theme="dark"] img[src*="img/art/"] { filter: brightness(.9) saturate(.95); }
 :root[data-theme="dark"] .brand img, :root[data-theme="dark"] .footer-brand img { box-shadow: 0 0 0 2px #fff; }
 :root[data-theme="dark"] ::selection { background: #5a2420; color: #fff; }
 :root[data-theme="dark"] .skip-link { background: #c8291d; color: #fff; }

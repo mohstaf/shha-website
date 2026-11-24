@@ -12,4 +12,16 @@ for key, ratio, medical in JOBS:
     name = "-".join(x for x in (key, ratio, medical) if x) + ".svg"
     with open(os.path.join(OUT, name), "w") as f:
         f.write(make(key, ratio, medical))
-print(len(JOBS), "illustrations written to static/img/art/")
+# Dark versions: same drawings on deep, tinted backgrounds for the dark theme.
+import doodles, scenes
+LIGHT_P = dict(doodles.P); LIGHT_BG = dict(scenes.BG)
+DARK_P = dict(hill1="#1d3a2e", hill2="#244736", cloud="#2a3a56", sea="#1f3c63", wave="#2f5486",
+              wall1="#3a3326", wall2="#2a3a56", wall3="#26385a", window="#3c5175")
+DARK_BG = {k: {"#eef4fb": "#16233a", "#fdf0ea": "#2a1d22", "#eef6f0": "#142821", "#fdf6e8": "#272219"}.get(v, "#16233a") for k, v in LIGHT_BG.items()}
+doodles.P.update(DARK_P); scenes.BG.clear(); scenes.BG.update(DARK_BG)
+for key, ratio, medical in JOBS:
+    name = "-".join(x for x in (key, ratio, medical) if x) + "-dark.svg"
+    with open(os.path.join(OUT, name), "w") as f:
+        f.write(make(key, ratio, medical))
+doodles.P.clear(); doodles.P.update(LIGHT_P); scenes.BG.clear(); scenes.BG.update(LIGHT_BG)
+print(len(JOBS), "illustrations written to static/img/art/, each with a dark version")

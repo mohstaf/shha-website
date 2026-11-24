@@ -7,7 +7,8 @@ P = dict(
     blue='#5b8def', blueL='#8fb2f5', coral='#ef6b5b', coralL='#f6988c', mustard='#f4b942', mustardL='#f8cf73',
     mint='#7cc6a4', mintL='#a9dcc3', navy='#2f4a7a', navyL='#5a74a3', lilac='#a99bea', white='#ffffff',
     cream='#fff6e9', blush='#f58f80', sun='#ffd36e', hill1='#d6eedd', hill2='#bfe3ca', sea='#9cc3f2', seaL='#bcd6f7',
-    red='#e2483a', wall1='#fde7c4', wall2='#ffffff', wall3='#d9e6fb', dome='#5b8def', trunk='#8a6a52')
+    red='#e2483a', wall1='#fde7c4', wall2='#ffffff', wall3='#d9e6fb', dome='#5b8def', trunk='#8a6a52',
+    cloud='#ffffff', window='#c9d8ef', wave='#bcd6f7')
 
 def g(tf, items): return [('G', tf, items)]
 def at(x, y, items, s=1): return g(f'translate({x:.1f} {y:.1f})' + (f' scale({s:.3f})' if s != 1 else ''), items)
@@ -121,7 +122,7 @@ def hands_heart():
 
 # props
 def sun(r=24): return [('F', P['sun'], f'<circle r="{r*1.45:.0f}" opacity=".35"/>'), ('F', P['sun'], f'<circle r="{r}"/>')]
-def cloud(s=1): return [('F', P['white'], f'<path transform="scale({s})" d="M0 0 C -2 -12 12 -18 20 -10 C 24 -24 46 -24 50 -8 C 60 -10 66 0 60 8 L 2 8 C -6 8 -8 2 0 0 Z"/>')]
+def cloud(s=1): return [('F', P['cloud'], f'<path transform="scale({s})" d="M0 0 C -2 -12 12 -18 20 -10 C 24 -24 46 -24 50 -8 C 60 -10 66 0 60 8 L 2 8 C -6 8 -8 2 0 0 Z"/>')]
 def bird(): return [('T', None, '<path d="M0 0 q6 -6 12 0 q6 -6 12 0"/>')]
 def sparkle(s=1, col='sun'): return [('F', P[col], f'<path transform="scale({s})" d="M0 -12 C 2 -3 3 -2 12 0 C 3 2 2 3 0 12 C -2 3 -3 2 -12 0 C -3 -2 -2 -3 0 -12 Z"/>')]
 def heart(s=1): return [('F', P['coral'], f'<path transform="scale({s})" d="M0 -6 c -6 -10 -22 -6 -16 6 l 16 15 l 16 -15 c 6 -12 -10 -16 -16 -6 z"/>')]
@@ -144,16 +145,16 @@ def drop(s=1): return [('F', P['red'], f'<path transform="scale({s})" d="M0 -30 
 def city(W=420):
     it = [('F', P['wall1'], '<rect x="30" y="100" width="50" height="60" rx="4"/>'), ('F', P['wall2'], '<rect x="80" y="76" width="50" height="84" rx="4"/>'),
           ('F', P['wall3'], '<rect x="130" y="110" width="42" height="50" rx="4"/>')]
-    it += [('F', '#c9d8ef', ''.join(f'<rect x="{x}" y="{y}" width="10" height="12" rx="2"/>' for x, y in [(40,112),(60,112),(40,134),(60,134),(90,88),(110,88),(90,110),(110,110),(90,132),(110,132),(140,122),(156,122)]))]
+    it += [('F', P['window'], ''.join(f'<rect x="{x}" y="{y}" width="10" height="12" rx="2"/>' for x, y in [(40,112),(60,112),(40,134),(60,134),(90,88),(110,88),(90,110),(110,110),(90,132),(110,132),(140,122),(156,122)]))]
     it += [('F', P['wall2'], '<rect x="186" y="120" width="76" height="40" rx="4"/>'), ('F', P['dome'], '<path d="M194 120 C 194 82 254 82 254 120 Z"/>'),
            ('F', P['mustard'], '<path d="M220 72 a 7 7 0 1 0 9 -7 a 6 6 0 1 1 -9 7 z"/>'),
-           ('F', '#c9d8ef', '<path d="M200 160 v -16 a 8 8 0 0 1 16 0 v 16 Z M232 160 v -16 a 8 8 0 0 1 16 0 v 16 Z"/>'),
+           ('F', P['window'], '<path d="M200 160 v -16 a 8 8 0 0 1 16 0 v 16 Z M232 160 v -16 a 8 8 0 0 1 16 0 v 16 Z"/>'),
            ('F', P['wall2'], '<rect x="270" y="66" width="16" height="94" rx="3"/>'), ('F', P['coral'], '<path d="M266 68 L 278 44 L 290 68 Z"/>'),
            ('F', P['wall1'], '<rect x="300" y="104" width="40" height="56" rx="4"/>'),
            ('F', 'none', '<path d="M372 160 C 368 130 376 112 372 94" stroke="#8a6a52" stroke-width="5" stroke-linecap="round" fill="none"/>'),
            ('F', P['mint'], '<path d="M372 94 c -16 -10 -34 -4 -40 6 c 14 -2 28 -4 40 -6 z M372 94 c 16 -10 34 -4 40 6 c -14 -2 -28 -4 -40 -6 z M372 94 c -8 -18 -26 -22 -34 -16 c 12 2 24 8 34 16 z M372 94 c 8 -18 26 -22 34 -16 c -12 2 -24 8 -34 16 z"/>'),
            ('F', P['sea'], f'<path d="M0 160 H {W} V 999 H 0 Z"/>'),
-           ('F', 'none', '<path d="' + ''.join(f'M{x} 178 q 10 -6 20 0 ' for x in range(10, W, 46)) + '" stroke="#bcd6f7" stroke-width="3" stroke-linecap="round" fill="none"/>'),
+           ('F', 'none', '<path d="' + ''.join(f'M{x} 178 q 10 -6 20 0 ' for x in range(10, W, 46)) + '" stroke="' + P['wave'] + '" stroke-width="3" stroke-linecap="round" fill="none"/>'),
            ('F', P['coral'], '<path d="M120 182 h46 l-8 12 h-30 Z"/>'), ('F', P['white'], '<path d="M144 160 L 162 178 H 144 Z"/>')]
     return it
 
