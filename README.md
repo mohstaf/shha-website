@@ -23,6 +23,14 @@ python3 -m http.server 8765 --directory public
 
 Then open http://localhost:8765. To check that every page renders without writing anything, run `python3 build.py --check`.
 
+## Publish
+
+The site is live on GitHub Pages at https://mohstaf.github.io/shha-website/. The source is on the `main` branch of https://github.com/mohstaf/shha-website, and the built site is on the `gh-pages` branch. To publish changes, build, commit, then push both branches:
+
+```bash
+python3 build.py && git add -A && git commit -m "Update site" && git push && git push origin `git subtree split --prefix public main`:gh-pages --force
+```
+
 ## Before launch
 
 - **Forms:** forms show the WhatsApp and email alternatives until they are connected. To connect them, set `FORM_ENDPOINT` at the top of `static/js/main.js` to a form service endpoint, such as Formspree.
