@@ -32,7 +32,7 @@ def smile(cx, cy, w=7, open_=False):
                 ('F', '#f08a8a', f'<path d="M{cx-w*.55:.1f} {cy+w*.62:.1f} q{w*.55:.1f} {w*.5:.1f} {w*1.1:.1f} 0 q{-w*.55:.1f} {-w*.45:.1f} {-w*1.1:.1f} 0 Z"/>')]
     return [('L', None, f'<path d="M{cx-w} {cy} q{w} {w*.85:.1f} {2*w} 0"/>')]
 
-def kid_hijab(hij='blue', dress='mustard', skin='skin', mood='smile', arm=None):
+def kid_hijab(hij='blue', dress='mustard', skin='skin', mood='big', arm=None):
     it = []
     it += [('F', P[dress], '<path d="M54 200 C 54 172 74 152 100 152 C 126 152 146 172 146 200 Z"/>'),
            ('F', P[dress + 'L'] if dress + 'L' in P else P['white'], '<path d="M74 176 h10 M92 182 h10 M110 176 h10 M120 192 h10 M80 194 h10" stroke="' + (P[dress + 'L'] if dress + 'L' in P else '#fff') + '" stroke-width="5" stroke-linecap="round"/>')]
@@ -44,8 +44,9 @@ def kid_hijab(hij='blue', dress='mustard', skin='skin', mood='smile', arm=None):
     return it
 
 def kid_boy(shirt='mint', skin='skin2'):
-    it = [('F', P[shirt], '<path d="M56 200 C 56 172 76 152 100 152 C 124 152 144 172 144 200 Z"/>'),
-          ('F', P[shirt + 'L'], '<path d="M86 154 q14 12 28 0 v8 q-14 10 -28 0 Z"/>'),
+    it = [('F', P[skin], '<path d="M86 128 H 114 V 166 H 86 Z"/>'),
+          ('F', P[shirt], '<path d="M56 200 C 56 172 72 156 86 153 C 90 163 110 163 114 153 C 128 156 144 172 144 200 Z"/>'),
+          ('F', P[shirt + 'L'], '<path d="M85 152 C 89 165 111 165 115 152 L 118 154 C 113 171 87 171 82 154 Z"/>'),
           ('F', P[skin], '<circle cx="58" cy="104" r="10"/>'), ('F', P[skin], '<circle cx="142" cy="104" r="10"/>'),
           ('F', P[skin], '<circle cx="100" cy="102" r="44"/>')]
     bumps = ''.join(f'<circle cx="{x}" cy="{y}" r="{r}"/>' for x, y, r in [(66,80,13),(78,66,14),(94,58,15),(110,58,15),(125,64,14),(136,78,13),(140,92,8),(60,92,8)])
@@ -89,15 +90,17 @@ def doctor():
           ('F', P['navy'], '<path d="M100 24 C 58 24 40 56 42 94 C 44 120 54 140 68 154 C 84 162 116 162 132 154 C 146 140 156 120 158 94 C 160 56 142 24 100 24 Z"/>'),
           ('F', P['navyL'], '<path d="M70 42 C 80 32 92 29 104 29 C 92 34 80 42 74 54 Z"/>'),
           ('F', P['skin'], '<ellipse cx="100" cy="98" rx="38" ry="39"/>')]
-    it += eyes(100, 96) + cheeks(100, 112, 24) + smile(100, 113, 6)
+    it += eyes(100, 96) + cheeks(100, 112, 24) + smile(100, 113, 6, True)
     it += [('L', None, '<path d="M78 156 C 70 174 78 190 98 190 C 112 190 120 182 120 172"/>'),
            ('F', P['mustard'], '<circle cx="120" cy="170" r="7"/>'), ('W', None, '<circle cx="120" cy="170" r="3"/>')]
     return it
 
 def man(shirt='blue', skin='skin2'):
-    it = [('F', P[shirt], '<path d="M54 200 C 54 170 76 152 100 152 C 124 152 146 170 146 200 Z"/>'),
-          ('F', P[shirt + 'L'], '<path d="M88 154 L 100 168 L 112 154 Z"/>'),
-          ('F', P[skin], '<path d="M82 124 H 118 V 150 C 112 158 88 158 82 150 Z"/>'), ('F', P[skin + 'D'] if skin + 'D' in P else '#8f5a37', '<path d="M82 134 C 92 142 108 142 118 134 V 140 C 108 147 92 147 82 140 Z" opacity=".35"/>'),
+    shade = P[skin + 'D'] if skin + 'D' in P else '#8f5a37'
+    it = [('F', P[skin], '<path d="M83 122 H 117 V 166 H 83 Z"/>'),
+          ('F', shade, '<path d="M83 132 C 92 141 108 141 117 132 V 140 C 108 148 92 148 83 140 Z" opacity=".35"/>'),
+          ('F', P[shirt], '<path d="M54 200 C 54 172 70 156 84 153 C 88 163 112 163 116 153 C 130 156 146 172 146 200 Z"/>'),
+          ('F', P[shirt + 'L'], '<path d="M82 152 C 86 166 114 166 118 152 L 121 154 C 116 172 84 172 79 154 Z"/>'),
           ('F', P[skin], '<circle cx="58" cy="100" r="9"/>'), ('F', P[skin], '<circle cx="142" cy="100" r="9"/>'),
           ('F', P[skin], '<circle cx="100" cy="98" r="42"/>')]
     # short curly hair
@@ -108,7 +111,7 @@ def man(shirt='blue', skin='skin2'):
     it += [('F', P['hair'], '<path d="M59 100 C 61 127 78 141 100 141 C 122 141 139 127 141 100 C 138 117 125 130 100 131 C 75 130 62 117 59 100 Z"/>'),
            ('F', P['hair'], '<path d="M87 113 C 93 108 107 108 113 113 C 107 112 93 112 87 113 Z"/>')]
     it += eyes(100, 98) + [('F', P['blush'], '<ellipse cx="76" cy="108" rx="7" ry="4.2" opacity=".55"/><ellipse cx="124" cy="108" rx="7" ry="4.2" opacity=".55"/>')]
-    it += [('F', '#8c2f2a', '<path d="M93 119 q7 7 14 0 Z"/>')]
+    it += smile(100, 118, 7, True)
     return it
 
 def family():
